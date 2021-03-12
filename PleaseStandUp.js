@@ -7,6 +7,11 @@ class PleaseStandUp {
     */
 
    howOld(birthday){
+        // Count number of days from data of birth to current date
+
+        // divide number of days by 365.25 ( accounts for leap year ever 4 years)
+
+        // round down with floor to get whole number
         return -1;
     }
 
@@ -18,6 +23,22 @@ class PleaseStandUp {
     */
 
     timeConvert(numOfMins){
+
+        // get number of hours in numOfMins
+        let hour = numOfMins / 60;
+        // let hours = numOfMins.getHours();
+
+        // get the number of remaining minutes
+        // let mins = numOfMins % 60;
+        let mins = numOfMinutes();
+
+        // get the number of seconds  
+        let secs = numbOfSeconds();
+
+        // retun as Hour ":" Minutes
+        // wholeNum : remainder
+        return hours + ":" + mins + ":" + secs;
+
         return -1;
     }
 
