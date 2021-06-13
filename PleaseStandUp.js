@@ -25,21 +25,19 @@ class PleaseStandUp {
     timeConvert(numOfMins){
 
         // get number of hours in numOfMins
-        let hour = numOfMins / 60;
-        // let hours = numOfMins.getHours();
+        let hours = Math.floor(numOfMins / 60);
+        // 1 hour
 
         // get the number of remaining minutes
-        // let mins = numOfMins % 60;
-        let mins = numOfMinutes();
+        let mins = Math.floor(numOfMins % 60);
+        // 3 mins
 
-        // get the number of seconds  
-        let secs = numbOfSeconds();
+        // get the number of seconds  (mult by faction by 60 from mins )
+        let secs = Math.trunc((numOfMins % 1) * 60);
 
-        // retun as Hour ":" Minutes
-        // wholeNum : remainder
+        // return hours:minutes:secs
         return hours + ":" + mins + ":" + secs;
 
-        return -1;
     }
 
 }
